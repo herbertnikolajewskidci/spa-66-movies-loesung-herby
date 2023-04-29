@@ -5,7 +5,7 @@ export const SearchTermContext = React.createContext();
 const SearchTermProvider = ({ children }) => {
     const [searchTerm, setsearchTerm] = useState("");
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const urlWithSearchTerm = `http://www.omdbapi.com/?s=${searchTerm}&apikey=${API_KEY}`;
+    const urlWithSearchTerm = `https://www.omdbapi.com/?s=${searchTerm}&apikey=${API_KEY}`;
     const [fetchedSearchData, setAllowFetchforSearch, errorMessage] =
         useFetch(urlWithSearchTerm);
 
