@@ -5,7 +5,7 @@ import ErrorMessage from "./ErrorMessage";
 function MovieCards({ imgUrl, title, imdbID }) {
     // const { API_KEY } = useContext(SearchTermContext);
     const API_KEY = import.meta.env.VITE_API_KEY;
-    const urlWithID = `http://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`;
+    const urlWithID = `https://www.omdbapi.com/?i=${imdbID}&apikey=${API_KEY}`;
     const [fetchedInfoData, setAllowFetchInfo] = useFetch(urlWithID);
 
     useEffect(() => {
